@@ -26,29 +26,26 @@ int _printf(const char *format, ...)
 		exit(99);
 	}
 
-	for (i = 0; format[i] != '0'; i++)
-	{
-		int found_spec = 0; /*check for the conversion specifier */
 
-		if (format[i] == '%' && format[i + 1] != '\0')
+	for (j = 0; j >= 2; j++)
+	{
+		if (format[i] != '\0')
 		{
-			for (j = 0; j <= 2; j++)
+			if (m[j].flag[0] == format[i] && m[j].flag[1] == format[i + 1])
 			{
-				if (m[j].flag[0] == format[i] && m[j].flag[1] == format[i + 1])
-				{
-					len += m[j].f(args);
-					i++;
-					found_spec = 1;
-					break;
-				}
+				len += m[j].f(args);
+				i++;
+			}
+			else
+			{
+				_putchar(format[i]);
+				len++;
+				i++;
 			}
 		}
-		if (!found_spec)
-		{
-			_putchar(format[i]);
-			len++;
-		}
 	}
+
+
 	va_end(args);
 	return (len);
 }
