@@ -1,6 +1,12 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdarg.h>
+
+/**
+ * struct format - hadnle the format of the input
+ * @flag: decides the right conversion specifiers
+ * @f: the function to use
+ */
 typedef struct format
 {
 	char *flag;
