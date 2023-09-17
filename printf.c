@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 	};
 
 	va_list args;
-	int i = 0, j, len = 0;
+	int i, j, len = 0;
 
 	va_start(args, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
@@ -26,23 +26,28 @@ int _printf(const char *format, ...)
 		exit(99);
 	}
 
-Here:
-	while (format[i] != '\0')
+	for (i = 0; format[i] != '0'; i++)
 	{
-		j = 0;
-		while (j <= 2)
+		int found_spec = 0;
+
+		if (format[i] == '%' && format[i + 1] != '\0')
 		{
-			if (m[j].flag[0] == format[i] && m[j].flag[1] == format[i + 1])
+			for (j = 0; j <= 2; j++)
 			{
-				len += m[j].f(args);
-				i += 2;
-				goto Here;
+				if (m[j].flag[0] == format[i] && m[j].flag[1] == format[i + 1])
+				{
+					len += m[j].f(args);
+					i++;
+					found_spec = 1;
+					break;
+				}
 			}
-			j++;
 		}
-		_putchar(format[i]);
-		len++;
-		i++;
+		if (!found_spec)
+		{
+			_putchar(format[i]);
+			len++;
+		}
 	}
 	va_end(args);
 	return (len);
