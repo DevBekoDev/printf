@@ -19,5 +19,7 @@ int _strlen(char *s);
 int print_strings(va_list args);
 int print_char(va_list args);
 int print_p_sign(void);
+int print_int(va_list args);
+int print_r(va_list args);
 /*int print_unknown(void);*/
 #endif
