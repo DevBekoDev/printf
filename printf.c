@@ -20,9 +20,9 @@ int _printf(const char *format, ...)
 	int i = 0, j, len = 0;
 
 	va_start(args, format);
-	if (format == NULL || (format[0] == '%' && format[1] == '\0')) /*Error Handling*/
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	{
-		_printf("Formation Error");
+		_printf("Formation Error"); /* Error Handling */
 		exit(99);
 	}
 
@@ -32,10 +32,11 @@ Here:
 		j = 2;
 		while (j >= 0)
 		{
-			if ((m[j].flag[0] == format[i] && m[j].flag[1] == format[i + 1])) /*finding conversion specifier*/
+			/*finding the conversion specifier*/
+			if ((m[j].flag[0] == format[i] && m[j].flag[1] == format[i + 1]))
 			{
 				len += m[j].f(args); /*call the matched function */
-				i+= 2;
+				i += 2;
 				goto Here; /* continue searchig in the remaining of the input */
 			}
 			j--;
