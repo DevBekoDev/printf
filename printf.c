@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	{
 		_printf("Formation Error"); /* Error Handling */
-		exit(99);
+		return (-1);
 	}
 
 Here:
