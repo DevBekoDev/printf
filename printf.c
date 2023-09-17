@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 
 	for (i = 0; format[i] != '0'; i++)
 	{
-		int found_spec = 0;
+		int found_spec = 0; /*check for the conversion specifier */
 
 		if (format[i] == '%' && format[i + 1] != '\0')
 		{
