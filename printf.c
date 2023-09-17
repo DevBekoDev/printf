@@ -26,6 +26,7 @@ int _printf(const char *format, ...)
 		exit(99);
 	}
 
+Here:
 	while (format[i] != '\0')
 	{
 		j = 0;
@@ -35,7 +36,7 @@ int _printf(const char *format, ...)
 			{
 				len += m[j].f(args);
 				i += 2;
-				break;
+				goto Here;
 			}
 			j++;
 		}
