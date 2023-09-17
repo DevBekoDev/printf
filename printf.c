@@ -17,32 +17,32 @@ int _printf(const char *format, ...)
 	};
 
 	va_list args;
-	int i, j, len = 0;
+	int i = 0, j, len = 0;
 
 	va_start(args, format);
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	if (format == NULL || (format[0] == '%' && format[1] == '\0')) /*Error Handling*/
 	{
-		_printf("Error");
+		_printf("Formation Error");
 		exit(99);
 	}
 
-
-	for (j = 0; j >= 2; j++)
+Here:
+	while (format[i] != '\0')
 	{
-		if (format[i] != '\0')
+		j = 2;
+		while (j >= 0)
 		{
-			if (m[j].flag[0] == format[i] && m[j].flag[1] == format[i + 1])
+			if ((m[j].flag[0] == format[i] && m[j].flag[1] == format[i + 1])) /*finding conversion specifier*/
 			{
-				len += m[j].f(args);
-				i++;
+				len += m[j].f(args); /*call the matched function */
+				i+= 2;
+				goto Here; /* continue searchig in the remaining of the input */
 			}
-			else
-			{
-				_putchar(format[i]);
-				len++;
-				i++;
-			}
+			j--;
 		}
+		_putchar(format[i]);
+		len++;
+		i++;
 	}
 
 
