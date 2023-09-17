@@ -21,21 +21,23 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-		return (-1);
-
+	{
+		_printf("Error");
+		exit(99);
+	}
 
 	while (format[i] != '\0')
 	{
-		j = 2;
-		while (j >= 0)
+		j = 0;
+		while (j <= 2)
 		{
-			if (m[j].flag[0] == format[i] && m[j].id[1] == format[i + 1])
+			if (m[j].flag[0] == format[i] && m[j].flag[1] == format[i + 1])
 			{
 				len += m[j].f(args);
 				i += 2;
 				break;
 			}
-			j--;
+			j++;
 		}
 		_putchar(format[i]);
 		len++;
