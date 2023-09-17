@@ -22,8 +22,7 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	{
-		_printf("Formation Error"); /* Error Handling */
-		return (-1);
+		return (-1); /*Error handling if format or the element after is null*/
 	}
 
 Here:
