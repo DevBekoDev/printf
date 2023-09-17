@@ -18,7 +18,7 @@ int print_strings(va_list args)
 
 	if (s == NULL)
 	{
-		s = "(nil)";
+		s = "(null)";
 		len = _strlen(s);
 		for (i = 0; i < len; i++)
 		{
