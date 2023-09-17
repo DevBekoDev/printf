@@ -4,12 +4,12 @@
 #include <stdarg.h>
 
 /**
- * print_string - print a string
+ * print_strings - print a string
  * @args: arguments provided to the function
  * Return: the number of charachters printed
  */
 
-int print_string(va_list args)
+int print_strings(va_list args)
 {
 	int i, len;
 	char *s;

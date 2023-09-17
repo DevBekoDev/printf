@@ -15,8 +15,9 @@ int _printf(const char *format, ...)
 		{"%s", print_strings}, {"%c", print_char},
 		{"%%", print_p_sign}
 	};
-	int i = 0, j, len = 0;
+
 	va_list args;
+	int i = 0, j, len = 0;
 
 	va_start(args, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
@@ -34,10 +35,9 @@ int _printf(const char *format, ...)
 				}
 				j--;
 			}
-	
-		_putchar(format[i]);
-		len++;
-		i++;
+			_putchar(format[i]);
+			len++;
+			i++;
 	}
 	va_end(args);
 	return (len);
