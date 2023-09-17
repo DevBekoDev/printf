@@ -29,11 +29,11 @@ int _printf(const char *format, ...)
 		j = 2;
 		while (j >= 0)
 		{
-			if (m[j].flag[0] == format[i] && m[j].flag[1] == format[i + 1])
+			if (m[j].flag[0] == format[i] && m[j].id[1] == format[i + 1])
 			{
 				len += m[j].f(args);
-				i = i + 2;
-				continue;
+				i += 2;
+				break;
 			}
 			j--;
 		}
