@@ -33,7 +33,7 @@ Specifier | Output       | Examples
 `r`|Reversed string of characters|dlroW olleH
 `R`|ROT13 Translation of string|Uryyb
 
-## Project Requirements 
+## Project Requirements
 ## General
 - Allowed editors: vi, vim, emacs
 - All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the - - options -Wall -Werror -Wextra -pedantic -std=gnu89
