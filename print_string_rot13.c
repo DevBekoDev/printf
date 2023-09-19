@@ -31,23 +31,23 @@ int _rot13string(va_list types, char buffer[],
 	if (st == NULL)
 	st = "(AHYY)";
 	for (i = 0; st[i]; i++)
-{
-for (j = 0; ch1[j]; j++)
-{
-if (ch1[j] == st[i])
-{
-c = ch2[j];
-write(1, &c, 1);
-counter++;
-break;
-}
-}
-if (!ch1[j])
-{
-c = st[i];
-write(1, &c, 1);
-counter++;
-}
-}
+	{
+		for (j = 0; ch1[j]; j++)
+		{
+			if (ch1[j] == st[i])
+		{
+			c = ch2[j];
+			write(1, &c, 1);
+			counter++;
+			break;
+			}
+		}
+		if (!ch1[j])
+		{
+			c = st[i];
+			write(1, &c, 1);
+			counter++;
+		}
+	}
 	return (counter);
 }
