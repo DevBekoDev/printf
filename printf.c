@@ -13,7 +13,8 @@ int _printf(const char *format, ...)
 {
 	func_match m[] = {
 		{"%s", print_strings}, {"%c", print_char},
-		{"%%", print_p_sign}
+		{"%%", print_p_sign}, {"%i", print_int},
+		{"%d", print_dec}
 	};
 
 	va_list args;
@@ -28,7 +29,7 @@ int _printf(const char *format, ...)
 Here:
 	while (format[i] != '\0')
 	{
-		j = 2;
+		j = 4;
 		while (j >= 0)
 		{
 			/*finding the conversion specifier*/
