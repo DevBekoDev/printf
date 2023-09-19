@@ -18,19 +18,20 @@ The MPLAB® X IDE Simulator uses the UART1 Output window to display text written
  - Print integers: `_printf("This is an array element: arr[%d]:%c", 32, arr[32]);`
    - Output: This is an array element arr[32]:A
 ##Allowed specifiers and flags:
-| Specifier | Output     | Examples                |
-| :-------- | :------- | :------------------------- |
-| `c`| Character | A |
-|`d` or `i`| Signed integer|	1024, -1024|
-|`s`| String of characters | Hello World|
-|`b`| Binary Representation of unsigned integer|01010110|
-|`u`| unsigned integer|1024|
-|`o`|	Unsigned octal|432|
-|`x`| Unsigned hexadecimal integer| 3ca|
-|`X`| Unsigned hexadecimal integer (uppercase)| 3CA|
-|`p`| Pointer address|0x403212|
-|`r`|Reversed string of characters|dlroW olleH|
-|`R`|ROT13 Translation of string|Uryyb|
+
+Specifier | Output       | Examples
+ --- | --- | ---
+`c`       | Character    | A
+`d` or `i` | Signed integer|	1024, -1024
+`s`| String of characters | Hello World
+`b`| Binary Representation of unsigned integer|01010110
+`u`| unsigned integer|1024
+`o`|	Unsigned octal|432
+`x`| Unsigned hexadecimal integer| 3ca
+`X`| Unsigned hexadecimal integer (uppercase)| 3CA
+`p`| Pointer address|0x403212
+`r`|Reversed string of characters|dlroW olleH
+`R`|ROT13 Translation of string|Uryyb
 
 ## Project Requirements 
 ## General
@@ -66,7 +67,7 @@ $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 - You are not allowed to publish any content of this project.
 - Any form of plagiarism is strictly forbidden and will result in removal from the program.
 
-# Tasks required for this project
+# Project's Tasks
 ## 0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life
  - Write a function that produces output according to a format.
  - Prototype: int _printf(const char *format, ...);
