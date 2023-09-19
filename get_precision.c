@@ -15,12 +15,13 @@ int pr = -1;
 
 	if (format[x] != '.')
 {
-return (pr);
+
+	return (pr);
 }
 
-	x++;
+x++;
 
-	pr = 0;
+pr = 0;
 
 for (; format[x] != '\0'; x++)
 {

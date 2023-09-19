@@ -21,6 +21,7 @@ int print_char(va_list args);
 int print_p_sign(void);
 int print_int(va_list args);
 int print_dec(va_list args);
+int _flag(const char *format, int *i);
 
 /*int print_unknown(void);*/
 #endif
