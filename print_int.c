@@ -27,7 +27,7 @@ int print_int(va_list args)
 		last_num = -last_num;
 		i++; /* count the characters printed */
 	}
-	
+
 	if (num > 0)
 	{
 		while (num / 10 != 0) /* check more digits to process */
@@ -41,7 +41,7 @@ int print_int(va_list args)
 		{
 			digit = num / exp; /* get the leftmost digit of the number */
 			_putchar(digit + '0');
-			num = num - (digit * exp); /*remove leftmost digit from the remaining of th e number */
+			num = num - (digit * exp); /*remove leftmost digit from the number */
 			exp = exp / 10;
 			i++; /* count the charachters printed */
 		}
