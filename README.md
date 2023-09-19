@@ -19,19 +19,20 @@ The MPLAB® X IDE Simulator uses the UART1 Output window to display text written
    - Output: This is an array element arr[32]:A
 ##Allowed specifiers and flags:
 
-| Specifier | Output     | Examples                |
-| :-------- | :------- | :------------------------- |
-| `c`| Character | A |
-|`d` or `i`| Signed integer|	1024, -1024|
-|`s`| String of characters | Hello World|
-|`b`| Binary Representation of unsigned integer|01010110|
-|`u`| unsigned integer|1024|
-|`o`|	Unsigned octal|432|
-|`x`| Unsigned hexadecimal integer| 3ca|
-|`X`| Unsigned hexadecimal integer (uppercase)| 3CA|
-|`p`| Pointer address|0x403212|
-|`r`|Reversed string of characters|dlroW olleH|
-|`R`|ROT13 Translation of string|Uryyb|
+Specifier | Output       | Examples
+ --- | --- | ---
+`c`       | Character    | A
+`d` or `i` | Signed integer|	1024, -1024
+`s`| String of characters | Hello World
+`b`| Binary Representation of unsigned integer|01010110
+`u`| unsigned integer|1024
+`o`|	Unsigned octal|432
+`x`| Unsigned hexadecimal integer| 3ca
+`X`| Unsigned hexadecimal integer (uppercase)| 3CA
+`p`| Pointer address|0x403212
+`r`|Reversed string of characters|dlroW olleH
+`R`|ROT13 Translation of string|Uryyb
+
 ## Project Requirements 
 ## General
 - Allowed editors: vi, vim, emacs
