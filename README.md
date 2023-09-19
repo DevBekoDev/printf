@@ -18,6 +18,7 @@ The MPLAB® X IDE Simulator uses the UART1 Output window to display text written
  - Print integers: `_printf("This is an array element: arr[%d]:%c", 32, arr[32]);`
    - Output: This is an array element arr[32]:A
 ##Allowed specifiers and flags:
+
 | Specifier | Output     | Examples                |
 | :-------- | :------- | :------------------------- |
 | `c`| Character | A |
@@ -31,7 +32,6 @@ The MPLAB® X IDE Simulator uses the UART1 Output window to display text written
 |`p`| Pointer address|0x403212|
 |`r`|Reversed string of characters|dlroW olleH|
 |`R`|ROT13 Translation of string|Uryyb|
-
 ## Project Requirements 
 ## General
 - Allowed editors: vi, vim, emacs
