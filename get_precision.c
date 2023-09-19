@@ -14,13 +14,14 @@ int x = *i + 1;
 int pr = -1;
 
 	if (format[x] != '.')
-	{
-return (pr);
-	}
+{
 
-	x++;
+	return (pr);
+}
 
-	pr = 0;
+x++;
+
+pr = 0;
 
 for (; format[x] != '\0'; x++)
 {
