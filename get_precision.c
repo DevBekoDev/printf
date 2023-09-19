@@ -14,9 +14,9 @@ int x = *i + 1;
 int pr = -1;
 
 	if (format[x] != '.')
-	{
+{
 return (pr);
-	}
+}
 
 	x++;
 
