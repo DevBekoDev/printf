@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 		{"%s", print_strings}, {"%c", print_char},
 		{"%%", print_p_sign}, {"%i", print_int},
 		{"%d", print_dec}
+		{int flags, width, precision, size, buff_ind = 0;}
 	};
 
 	va_list args;
