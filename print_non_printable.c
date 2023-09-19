@@ -33,7 +33,6 @@ while (str[i] != '\0')
 {
 
 if (is_printable(str[i]))
-
 buffer[i + offset] = str[i];
 
 else
