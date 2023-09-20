@@ -14,8 +14,11 @@ int _printf(const char *format, ...)
 	func_match m[] = {
 		{"%s", print_strings}, {"%c", print_char},
 		{"%%", print_p_sign}, {"%i", print_int},
-		{"%d", print_dec}
-		{int flags, width, precision, size, buff_ind = 0;}
+		{"%d", print_dec}, {"%b", print_binary},
+		{"%x", unsigned_hexa}, {"%p", print_pointer},
+		{"%o", _octal}, {"%u", _unsigned},
+		{"%X", _hexa_upper}, {"%r", _reverse},
+		{"%R", _rot13string}
 	};
 
 	va_list args;
