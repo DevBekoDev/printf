@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 {
 	func_match m[] = {
 		{"%s", print_strings}, {"%c", print_char},
-		{"%%", print_p_sign}, {"%i",print_int},
+		{"%%", print_p_sign}, {"%i", print_int},
 		{"%d", print_dec}
 	};
 

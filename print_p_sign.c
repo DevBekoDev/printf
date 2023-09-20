@@ -5,7 +5,6 @@
 
 /**
  * print_p_sign - prints %
- * @args: arguments provided
  * Return: 1
  */
 
