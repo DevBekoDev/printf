@@ -18,13 +18,12 @@ int print_strings(va_list args)
 
 	if (s == NULL)
 	{
-		s = "(null)";
+		s = "(nil)";
 		len = _strlen(s);
 		for (i = 0; i < len; i++)
 		{
 			_putchar(s[i]);
 		}
-		return (len);
 	}
 	else
 	{
@@ -35,4 +34,5 @@ int print_strings(va_list args)
 		}
 		return (len);
 	}
+	return (len);
 }

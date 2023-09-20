@@ -5,11 +5,12 @@
 
 /**
  * print_p_sign - prints %
+ * @args: arguments provided
  * Return: 1
  */
 
 int print_p_sign(void)
 {
-	_putchar(37);
+	_putchar('%');
 	return (1);
 }
